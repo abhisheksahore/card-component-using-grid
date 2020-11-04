@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: 'Blinker', sans-serif;
     height: 100vh;
+    width: 100%;
 }
 
 .card {
@@ -37,6 +38,7 @@ body {
     margin: 0;
     letter-spacing: 2px;
     align-self: start;
+    max-width: 550px;
 }
 
 .card__bodyInfo {
@@ -45,6 +47,7 @@ body {
     letter-spacing: 1.2px;
     margin: 0;
     line-height: 1.5;
+    max-width: 550px;
 }
 
 .card__readingTime {
@@ -91,7 +94,7 @@ body {
 
 @media (min-width: 600px) {
     .card {
-        grid-template: auto / 30vw 70vw;
+        grid-template: auto / 30% 70%;
         height: 100vh;
         margin: auto;
     }
@@ -100,19 +103,24 @@ body {
     }
 }
 
-@media (min-width: 600px) and (min-height: 600px) {
+@media (min-width: 600px) and (max-width: 1000px) and (min-height: 600px) {
     body {
         display: flex;
     }
     .card {
-        height: 65vh;
-        margin: auto;
+        height: 60vh;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1001px) and (min-height: 600px) {
+    body {
+        /* background-color: green; */
+        display: flex;
+    }
     .card {
-        width: 65vw;
-        margin: auto;
+        width: 60%;
+        height: 60vh;
     }
 }
